@@ -13,7 +13,7 @@ from selenium.webdriver.common.by import By
 
 # --- GLOBAL SETTINGS ---
 keyword = "Yoda"
-url = "https://www.lego.com" + "/en-us"
+url = "https://www..com" + "/en-us"
 
 
 # --- TESTING OBJECTS ---
@@ -102,7 +102,7 @@ def test(assertion, name, counter=Counter()):
 
 
 # --- PAGE OBJECTS ---
-class LegoHomePage:
+class HomePage:
     def __init__(self, driver):
         self.driver = driver
 
@@ -124,7 +124,7 @@ class LegoHomePage:
     _searchInpt_selector = data_test("search-input")
 
 
-class LegoSearchResultsPage:
+class SearchResultsPage:
     def __init__(self, driver):
         self.driver = driver
 
@@ -155,7 +155,7 @@ class LegoSearchResultsPage:
     _productLeafTitle_selector = data_test("product-leaf-title")
 
 
-class LegoCartPage:
+class CartPage:
     def __init__(self, driver):
         self.driver = driver
 
@@ -169,14 +169,15 @@ class LegoCartPage:
     _productTitle_selector = data_test("product-title")
 
 
+
 # --- TEST FLOW ---
 def test_flow():
     counter = Counter()
     driver = Driver()
 
-    home_page = LegoHomePage(driver)
-    search_page = LegoSearchResultsPage(driver)
-    cart_page = LegoCartPage(driver)
+    home_page = HomePage(driver)
+    search_page = SearchResultsPage(driver)
+    cart_page = CartPage(driver)
     try:
         home_page.navigate(url)
         home_page.accept_cookies_and_age_gate()
