@@ -13,7 +13,7 @@ from selenium.webdriver.common.by import By
 
 # --- GLOBAL SETTINGS ---
 keyword = "Yoda"
-url = "https://www..com" + "/en-us"
+url = "https://www.lego.com" + "/en-us"
 
 
 # --- TESTING OBJECTS ---
@@ -167,7 +167,6 @@ class CartPage:
 
     _cartBtn_selector = data_test("util-bar-cart")
     _productTitle_selector = data_test("product-title")
-
 
 
 # --- TEST FLOW ---
