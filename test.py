@@ -53,7 +53,7 @@ def data_test(value):
 # --- PRINTING FUNCTIONS ---
 def print_critical_msg(error):
     print(styled_error("Test failed because of a blocker!"))
-    print(styled_error("Error: " + error))
+    print(styled_error("Error: " + str(error)))
 
 
 def print_suite_success_msg(counter=Counter()):
